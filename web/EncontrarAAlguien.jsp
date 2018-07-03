@@ -37,9 +37,9 @@
             </div>
         </nav>
         <section class="background">
+            <img src="img/logo.png" border="1" alt="logo" width="100" height="100">
             <h1 class="title">TeBusco.com</h1>
             <h3 class="title-a">Uniendo familias</h3>
-            <a href="#output" class="badge badge-info">Busco a alguien</a>
         </section>
         <form action="crearpersona" name="frmnuevo" method="POST" enctype="multipart/form-data" id="frm_nuevo">
             <article class='persona'>
@@ -53,7 +53,7 @@
                         <label for="validationCustom01">Genero</label>
                         <select name="size" id="gender" class="custom-select" required>
                             <option value="Hombre">Hombre</option>
-                            <option value="Hombre">Mujer</option>
+                            <option value="Mujer">Mujer</option>
                             <option value="Otro">Otro</option>
                         </select>
                     </div>
@@ -132,12 +132,12 @@
                 </div>
                 <div class="form-row">
                     <label for="validationCustom01">Descripción</label>
-                    <textarea cols="30" rows="6" class="form-control" name="descripcion" id="descripcion"></textarea>
+                    <textarea cols="30" rows="6" class="form-control" name="descripcion" id="descripcion" required></textarea>
                 </div>
                 <div class="form-row">
                     <div class="col-md-4 mb-3">
                         <label for="">Imagen:</label>
-                        <input type="file" name="file[]" id="archivos" multiple>
+                        <input type="file" name="file[]" id="archivos" accept=".jpg,.png" required>
                     </div>
                 </div>
             </article>

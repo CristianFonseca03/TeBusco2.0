@@ -40,7 +40,7 @@
             <img src="img/logo.png" border="1" alt="logo" width="100" height="100">
             <h1 class="title">TeBusco.com</h1>
             <h3 class="title-a">Uniendo familias</h3>
-            <a href="#output" class="badge badge-info">Busco a alguien</a>
+            <a href="EncontrarAAlguien.jsp" class="badge badge-info">Busco a alguien</a>
         </section>
         <h3 class="center">Personas buscadas</h3>
         <p id="output"></p>

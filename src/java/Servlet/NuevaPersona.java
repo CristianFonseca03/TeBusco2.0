@@ -49,9 +49,9 @@ public class NuevaPersona extends HttpServlet {
             for (int i = 0; i < items.size(); i++) {
                 FileItem item = (FileItem) items.get(i);
                 if (!item.isFormField()) {
-                    File archivo = new File("C:\\Users\\Cristian\\Documents\\NetBeansProjects\\TeBusco2.0\\web\\img\\personas\\"+item.getName());
+                    File archivo = new File("C:\\Users\\Cristian\\Documents\\NetBeansProjects\\TeBusco2.0\\web\\img\\personas\\" + item.getName());
                     item.write(archivo);
-                    imgs.add("img/personas/"+item.getName());
+                    imgs.add("img/personas/" + item.getName());
                 } else {
                     campos.add(item.getString());
                 }
@@ -59,10 +59,12 @@ public class NuevaPersona extends HttpServlet {
         } catch (Exception ex) {
 
         }
-
-        //Persona p = new Persona(0, campos.get(0), campos.get(1), campos.get(2), imgs.get(0), campos.get(3), campos.get(4), campos.get(5), campos.get(6), campos.get(7));
-        //ControladorPersonas cp = new ControladorPersonas();
-        response.getWriter().println(campos.get(0));
+        String date_b = campos.get(2) + "/" + campos.get(3) + "/" + campos.get(4);
+        String date_d = campos.get(5) + "/" + campos.get(6) + "/" + campos.get(7);
+        Persona p = new Persona(0, campos.get(0), campos.get(1), campos.get(8), imgs.get(0), campos.get(9), campos.get(10), campos.get(11), date_b, date_d);
+        //Persona a = new Persona(0, campos.get(0), campos.get(1), campos.get(8), imgs.get(0), imgs.get(9), imgs.get(10), imgs.get(11), date_b, date_d);
+        ControladorPersonas cp = new ControladorPersonas();
+        response.getWriter().println(cp.crearPersona(p));
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
