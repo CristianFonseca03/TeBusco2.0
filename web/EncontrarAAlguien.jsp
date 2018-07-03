@@ -88,7 +88,7 @@
                     <div class="col-md-4 mb-3">
                         <label for="validationCustom01">Año</label>
                         <select name="size" id="mes" class="custom-select">
-                            <%for (int i = 1930; i <= 2018; i++) {%>
+                            <%for (int i = 2018; i >= 1960; i--) {%>
                             <option value='<%= i%>'><%= i%></option>
                             <%}%>
                         </select>
@@ -124,7 +124,7 @@
                     <div class="col-md-4 mb-3">
                         <label for="validationCustom01">Año</label>
                         <select name="size" id="mes" class="custom-select">
-                            <%for (int i = 1930; i <= 2018; i++) {%>
+                            <%for (int i = 2018; i >= 1960; i--) {%>
                             <option value='<%= i%>'><%= i%></option>
                             <%}%>
                         </select>

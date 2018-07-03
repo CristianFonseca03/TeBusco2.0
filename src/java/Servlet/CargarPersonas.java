@@ -39,8 +39,13 @@ public class CargarPersonas extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
             ControladorPersonas cp = new ControladorPersonas();
             ArrayList<Persona> list = cp.getPersonas();
-            Gson gson = new Gson();
-            out.print(gson.toJson(list));
+            if (list.size() < 1) {
+                out.print(0);
+            } else {
+                Gson gson = new Gson();
+                out.print(gson.toJson(list));
+            }
+
         }
     }
 

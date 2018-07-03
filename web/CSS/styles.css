@@ -37,6 +37,15 @@
     margin-bottom: 10px;
 }
 
+.gif{
+    border-radius: 8px;
+    display:block;
+    margin:auto;
+    margin-bottom: 10px;
+    width: 260px;
+    height: 260px;
+}
+
 .button_des{
     border-radius: 8px;
     display:block;
