@@ -14,11 +14,12 @@
         <script type="text/javascript" src="Scripts/scripts.js"></script>
         <link rel="stylesheet" type="text/css" href="CSS/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="CSS/styles.css">
+        <link rel="icon" type="image/gif" href="img/favicon.gif" />
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" href="index.jsp">
-                <img src="Images/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+                <img src="img/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
                 TeBusco
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,6 +42,7 @@
             <a href="#output" class="badge badge-info">Busco a alguien</a>
         </section>
         <form action="crearpersona" name="frmnuevo" method="POST" enctype="multipart/form-data" id="frm_nuevo">
+            <h3 class="center">Datos de la persona desaparecida</h3>
             <table>
                 <tr>
                     <td><label for="">Nombre:</label></td>
