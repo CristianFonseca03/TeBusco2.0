@@ -12,7 +12,7 @@
         <meta name="viewport" content="widt=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <title>Te Busco: Encontrar a alguien</title>
         <script type="text/javascript" src="Scripts/scripts.js"></script>
-        <link rel="stylesheet" type="text/css" href="CSS/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="CSS/bootstrap.css">
         <link rel="stylesheet" type="text/css" href="CSS/styles.css">
         <link rel="icon" type="image/gif" href="img/favicon.gif" />
     </head>
@@ -42,49 +42,123 @@
             <a href="#output" class="badge badge-info">Busco a alguien</a>
         </section>
         <form action="crearpersona" name="frmnuevo" method="POST" enctype="multipart/form-data" id="frm_nuevo">
-            <h3 class="center">Datos de la persona desaparecida</h3>
-            <table>
-                <tr>
-                    <td><label for="">Nombre:</label></td>
-                    <td><input type="text" name="nombre" id="nombre"></td>
-                </tr>
-                <tr>
-                    <td><label for="">Genero:</label></td>
-                    <td><input type="text" name="nombre" id="genero"></td>
-                </tr>
-                <tr>
-                    <td><label for="">Descripcion:</label></td>
-                    <td><textarea cols="30" rows="6" name="descripcion" id="descripcion"></textarea></td>
-                </tr>
-                <tr>
-                    <td><label for="">Imagenes:</label></td>
-                    <td><input type="file" name="file[]" id="archivos" multiple></td>
-                </tr>
-                <tr>
-                    <td><label for="">Nombre PB:</label></td>
-                    <td><input type="text" name="nombrePB" id="nombre"></td>
-                </tr>
-                <tr>
-                    <td><label for="">tel PB:</label></td>
-                    <td><input type="text" name="telPB" id="nombre"></td>
-                </tr>
-                <tr>
-                    <td><label for="">ced PB:</label></td>
-                    <td><input type="text" name="cedPB" id="nombre"></td>
-                </tr>
-                <tr>
-                    <td><label for="">fecha cum:</label></td>
-                    <td><input type="text" name="cedPB" id="nombre"></td>
-                </tr>
-                <tr>
-                    <td><label for="">fecha dis:</label></td>
-                    <td><input type="text" name="cedPB" id="nombre"></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td><input type="submit" value="Crear Persona" id="btncrearproducto"></td>
-                </tr>
-            </table>
+            <article class='persona'>
+                <h3 class="center" style="font-weight: 600;">Datos de la persona desaparecida</h3>
+                <div class="form-row">
+                    <div class="col-md-4 mb-3">
+                        <label for="validationCustom01">Nombre</label>
+                        <input type="text" class="form-control" name="nombre" id="validationCustom01" required>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="validationCustom01">Genero</label>
+                        <select name="size" id="gender" class="custom-select" required>
+                            <option value="Hombre">Hombre</option>
+                            <option value="Hombre">Mujer</option>
+                            <option value="Otro">Otro</option>
+                        </select>
+                    </div>
+                </div>
+                <label for="validationCustom01" style="font-weight: 600;">Fecha de nacimiento</label>
+                <div class="form-row">
+                    <div class="col-md-4 mb-3">
+                        <label for="validationCustom01">Dia</label>
+                        <select name="size" id="dia" class="custom-select">
+                            <%for (int i = 1; i <= 31; i++) {%>
+                            <option value='<%= i%>'><%= i%></option>
+                            <%}%>
+                        </select>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="validationCustom01">Mes</label>
+                        <select name="size" id="mes" class="custom-select">
+                            <option value='1'>Enero</option>
+                            <option value='2'>Febero</option>
+                            <option value='3'>Marzo</option>
+                            <option value='4'>Abril</option>
+                            <option value='5'>Mayo</option>
+                            <option value='6'>Junio</option>
+                            <option value='7'>Julio</option>
+                            <option value='8'>Agosto</option>
+                            <option value='9'>Septiembre</option>
+                            <option value='10'>Octubre</option>
+                            <option value='11'>Noviembre</option>
+                            <option value='12'>Diciembre</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="validationCustom01">Año</label>
+                        <select name="size" id="mes" class="custom-select">
+                            <%for (int i = 1930; i <= 2018; i++) {%>
+                            <option value='<%= i%>'><%= i%></option>
+                            <%}%>
+                        </select>
+                    </div>
+                </div>
+                <label for="validationCustom01" style="font-weight: 600;">Visto por ultima vez el día ....</label>
+                <div class="form-row">
+                    <div class="col-md-4 mb-3">
+                        <label for="validationCustom01">Dia</label>
+                        <select name="size" id="dia" class="custom-select">
+                            <%for (int i = 1; i <= 31; i++) {%>
+                            <option value='<%= i%>'><%= i%></option>
+                            <%}%>
+                        </select>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="validationCustom01">Mes</label>
+                        <select name="size" id="mes" class="custom-select">
+                            <option value='1'>Enero</option>
+                            <option value='2'>Febero</option>
+                            <option value='3'>Marzo</option>
+                            <option value='4'>Abril</option>
+                            <option value='5'>Mayo</option>
+                            <option value='6'>Junio</option>
+                            <option value='7'>Julio</option>
+                            <option value='8'>Agosto</option>
+                            <option value='9'>Septiembre</option>
+                            <option value='10'>Octubre</option>
+                            <option value='11'>Noviembre</option>
+                            <option value='12'>Diciembre</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="validationCustom01">Año</label>
+                        <select name="size" id="mes" class="custom-select">
+                            <%for (int i = 1930; i <= 2018; i++) {%>
+                            <option value='<%= i%>'><%= i%></option>
+                            <%}%>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <label for="validationCustom01">Descripción</label>
+                    <textarea cols="30" rows="6" class="form-control" name="descripcion" id="descripcion"></textarea>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-4 mb-3">
+                        <label for="">Imagen:</label>
+                        <input type="file" name="file[]" id="archivos" multiple>
+                    </div>
+                </div>
+            </article>
+            <article class='persona'>
+                <h3 class="center" style="font-weight: 600;">Tus datos</h3>
+                <div class="form-row">
+                    <div class="col-md-4 mb-3">
+                        <label for="validationCustom01">Nombre</label>
+                        <input type="text" class="form-control" name="nombre" id="validationCustom01" required>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="validationCustom01">Telefono</label>
+                        <input type="text" class="form-control" name="nombre" id="validationCustom01" required>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="validationCustom01">Cedula</label>
+                        <input type="text" class="form-control" name="nombre" id="validationCustom01" required>
+                    </div>
+                </div>
+            </article>
+            <button class="badge badge-info center button_des" type="submit">Enviar</button>
         </form>
     </body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

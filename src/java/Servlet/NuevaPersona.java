@@ -60,9 +60,9 @@ public class NuevaPersona extends HttpServlet {
 
         }
 
-        Persona p = new Persona(0, campos.get(0), campos.get(1), campos.get(2), imgs.get(0), campos.get(3), campos.get(4), campos.get(5), campos.get(6), campos.get(7));
-        ControladorPersonas cp = new ControladorPersonas();
-        response.getWriter().println(cp.crearPersona(p));
+        //Persona p = new Persona(0, campos.get(0), campos.get(1), campos.get(2), imgs.get(0), campos.get(3), campos.get(4), campos.get(5), campos.get(6), campos.get(7));
+        //ControladorPersonas cp = new ControladorPersonas();
+        response.getWriter().println(campos.get(0));
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
