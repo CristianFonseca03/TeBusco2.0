@@ -150,11 +150,11 @@
                     </div>
                     <div class="col-md-4 mb-3">
                         <label for="validationCustom01">Telefono</label>
-                        <input type="text" class="form-control" name="nombre" id="validationCustom01" required>
+                        <input type="number" class="form-control" onkeypress="return validateNoSpace(event)" name="nombre" id="validationCustom01" required>
                     </div>
                     <div class="col-md-4 mb-3">
                         <label for="validationCustom01">Cedula</label>
-                        <input type="text" class="form-control" name="nombre" id="validationCustom01" required>
+                        <input type="number" class="form-control" onkeypress="return validateNoSpace(event)" name="nombre" id="validationCustom01" required>
                     </div>
                 </div>
             </article>
